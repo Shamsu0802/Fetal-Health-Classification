@@ -51,12 +51,12 @@ Content-Type: application/json
   "histogram_variance": 200,
   "histogram_tendency": 0.5
 }
-### Sample response
+**Sample Request**
+
+```json
 {
   "prediction": "Normal",
   "confidence": 0.92
 }
-### Conclusion
-Implementing the API layer for the Random Forest fetal health prediction model greatly enhances its usability and deployment potential. It enables healthcare applications to seamlessly incorporate fetal health risk assessment into their workflows, allowing for quicker and more informed clinical decisions. This modular approach also paves the way for future expansions, such as integrating additional models, deploying on cloud platforms, or developing user-facing interfaces.
 
 
