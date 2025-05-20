@@ -51,12 +51,9 @@ Content-Type: application/json
   "histogram_variance": 200,
   "histogram_tendency": 0.5
 }
-**Sample Request**
 
-```json
+Sample Request
 {
   "prediction": "Normal",
   "confidence": 0.92
 }
-
-
