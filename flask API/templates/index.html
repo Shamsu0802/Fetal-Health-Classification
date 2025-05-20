@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="login">
+    <h1>Predict Fetal Health</h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="baseline_value" placeholder="Baseline Value" required="required" />
+      <input type="text" name="accelerations" placeholder="Accelerations" required="required" />
+      <input type="text" name="fetal_movement" placeholder="Fetal Movement" required="required" />
+      <input type="text" name="uterine_contractions" placeholder="Uterine Contractions" required="required" />
+      <input type="text" name="light_decelerations" placeholder="Light Decelerations" required="required" />
+      <input type="text" name="severe_decelerations" placeholder="Severe Decelerations" required="required" />
+      <input type="text" name="prolongued_decelerations" placeholder="Prolongued Decelerations" required="required" />
+      <input type="text" name="abnormal_short_term_variability" placeholder="Abnormal Short Term Variability" required="required" />
+      <input type="text" name="mean_value_of_short_term_variability" placeholder="Mean Value Of Short Term Variability" required="required" />
+      <input type="text" name="percentage_of_time_with_abnormal_long_term_variability" placeholder="Percentage Of Time With Abnormal Long Term Variability" required="required" />
+      <input type="text" name="mean_value_of_long_term_variability" placeholder="Mean Value Of Long Term Variability" required="required" />
+      <input type="text" name="histogram_width" placeholder="Histogram Width" required="required" />
+      <input type="text" name="histogram_min" placeholder="Histogram Min" required="required" />
+      <input type="text" name="histogram_max" placeholder="Histogram Max" required="required" />
+      <input type="text" name="histogram_number_of_peaks" placeholder="Histogram Number Of Peaks" required="required" />
+      <input type="text" name="histogram_number_of_zeroes" placeholder="Histogram Number Of Zeroes" required="required" />
+      <input type="text" name="histogram_mode" placeholder="Histogram Mode" required="required" />
+      <input type="text" name="histogram_mean" placeholder="Histogram Mean" required="required" />
+      <input type="text" name="histogram_median" placeholder="Histogram Median" required="required" />
+      <input type="text" name="histogram_variance" placeholder="Histogram Variance" required="required" />
+      <input type="text" name="histogram_tendency" placeholder="Histogram Tendency" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
+</body>
+</html>
